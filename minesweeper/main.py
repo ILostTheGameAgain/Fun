@@ -14,6 +14,12 @@ def grid_size(size):
     return grid
 
 
+#function to place the mines on a grid
+def mines(grid, size):
+    mine_count = int(size/10)
+    e
+
+
 #function to display the grid in a good looking way
 def display_grid(grid, size):
     grid_display = "\n   "
