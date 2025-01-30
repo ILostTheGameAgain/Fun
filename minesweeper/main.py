@@ -16,8 +16,17 @@ def grid_size(size):
 
 #function to place the mines on a grid
 def mines(grid, size):
-    mine_count = int(size/10)
-    e
+    mine_count = int((size**2)/5)
+    for i in range(mine_count):
+        #while loop to keep running until the mine is in an empty space
+        while True:
+            randomX = random.randint(1, size)-1
+            randomY = random.randint(1, size)-1
+            if grid[randomX][randomY] == " ":
+                grid[randomX][randomY] = "X"
+                break
+
+    return grid
 
 
 #function to display the grid in a good looking way
@@ -45,12 +54,18 @@ def display_grid(grid, size):
     return grid_display
 
 
+#function for user input
+def user_input(type, posX, posY, grid, mine_grid):
+    if type == 1
+    
+
+
 #main function
 def main():
     while True:
         try:
-            size = int(input("\nhow big is the board? "))
-            if size > 0:
+            size = int(input("\nhow big is the board? (must be at least 3) "))
+            if size >= 3:
                 break
             print("\ninvalid input")
         except ValueError:
@@ -58,6 +73,10 @@ def main():
 
     grid = grid_size(size)
     print(display_grid(grid, size))
+    mine_grid = mines(grid, size)
+
+    while True:
+        user_input()
 
 while True:
     main()
